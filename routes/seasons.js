@@ -22,10 +22,13 @@ function Tropes() {
   return knex('tropes')
 }
 
-
-/* GET home page. */
+//Shows all seasons
 router.get('/', function(req, res, next) {
-  res.render('index');
+  Seasons().select().then(function(results) {
+    console.log(results);
+    res.json(results);
+  })
 });
+
 
 module.exports = router;

@@ -1,5 +1,5 @@
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('trope', function(table){
+  return knex.schema.createTable('tropes', function(table){
     table.increments();
     table.integer('epiID');
     table.string('type');
@@ -8,5 +8,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('trope');
+  return knex.schema.dropTable('tropes');
 };

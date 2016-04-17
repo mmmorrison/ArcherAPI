@@ -1,0 +1,8 @@
+// heroku pg:reset postgresql-triangular-60157
+// heroku pg:push archer postgresql-triangular-60157 --app archerapi
+// https://archerapi.herokuapp.com/seasons
+// https://archerapi.herokuapp.com/episodes
+// https://archerapi.herokuapp.com/guests
+// https://archerapi.herokuapp.com/references
+// https://archerapi.herokuapp.com/tropes
+// https://archerapi.herokuapp.com/all
