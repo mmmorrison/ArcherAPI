@@ -26,9 +26,11 @@ function Tropes() {
 router.get('/', function(req, res, next) {
   Seasons().select().then(function(results) {
     console.log(results);
+    console.log("****************");
     res.json(results);
   })
 });
+
 
 
 module.exports = router;
