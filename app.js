@@ -11,6 +11,7 @@ var guests = require('./routes/guests');
 var seasons = require('./routes/seasons');
 var references = require('./routes/references');
 var tropes = require('./routes/tropes');
+var all = require('./routes/all');
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use('/guests', guests);
 app.use('/references', references);
 app.use('/tropes', tropes);
 app.use('/seasons', seasons);
+app.use('/all', all);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

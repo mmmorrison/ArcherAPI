@@ -14,7 +14,7 @@ function Guests() {
   return knex('guests');
 };
 
-function References() {
+function references() {
   return knex('references')
 };
 
@@ -23,11 +23,19 @@ function Tropes() {
 }
 
 router.get('/', function(req, res, next) {
-  References().select().then(function(results) {
+  Episodes().select().then(function(results) {
     res.json(results);
   })
 });
 
-
+router.get('/:id', function(req, res, next) {
+  Seasons().where({id: req.params.id}).then(function(results) {
+    Episodes().where('seasonID, req.params.id').then(function(episodes) {
+      seasons.episodes = episodes;
+      console.log(results);
+      res.json(results)
+    })
+  })
+});
 
 module.exports = router;
