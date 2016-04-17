@@ -1,7 +1,9 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('episodes', function(table){
     table.increments();
+    table.integer('epiID');
     table.string('title');
+    table.date('release_date');
     table.text('description');
   })
 };
